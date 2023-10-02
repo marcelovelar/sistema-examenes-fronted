@@ -8,6 +8,7 @@ import baserUrl from './helper';
 })
 export class LoginService {
 
+
   public loginStatusSubjec = new Subject<boolean>();
 
   constructor(private http:HttpClient) { }
@@ -31,7 +32,7 @@ export class LoginService {
     let tokenStr = localStorage.getItem('token');
     if(tokenStr == undefined || tokenStr == '' || tokenStr == null){
       return false;
-    }else{
+    }else {
       return true;
     }
   }

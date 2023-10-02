@@ -20,6 +20,9 @@ import { MatCardModule } from '@angular/material/card';
 import { LoginComponent } from './pages/login/login.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import { authInterceptorProviders } from './services/auth.interceptor';
+import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
+import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,7 @@ import {MatIconModule} from '@angular/material/icon';
     NavbarComponent,
     SignupComponent,
     HomeComponent,   
-    LoginComponent
+    LoginComponent, DashboardComponent, UserDashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,7 @@ import {MatIconModule} from '@angular/material/icon';
     MatIconModule,
 
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
   
